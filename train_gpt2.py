@@ -187,7 +187,7 @@ num_return_sequences = 3
 max_length = 256
 
 model = GPT(GPTConfig())
-
+model = torch.compile(model)
 model.eval()
 model.to(device)
 
